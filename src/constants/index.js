@@ -18,11 +18,6 @@ export const navLinks = [
     id: 4,
     name: 'Contact',
     href: '#contact',
-  },
-  {
-    id: 5,
-    name: "Download Resume",
-    href: '#contact',
   }
 ];
 
@@ -308,3 +303,24 @@ export const workExperiences = [
     technologies: ['Flask', 'HTML', 'CSS' ,'Javascript', 'C', 'Mongodb'],
   },
 ];
+
+export const socialMedia = [
+  {
+    id: 1,
+    name: 'Github',
+    src: '/assets/github.svg',
+    href: 'https://github.com/Rupeshdevasam',
+  },
+  {
+    id: 2,
+    name: 'LinkedIn',
+    src: '/assets/linkedin.png',
+    href: 'https://www.linkedin.com/in/rupeshdevasam/',
+  },
+  {
+    id: 3,
+    name: 'Instagram',
+    src: '/assets/instagram.svg',
+    href: 'https://www.instagram.com/rupeshdevasam/',
+  }
+]
