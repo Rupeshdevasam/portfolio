@@ -18,11 +18,6 @@ export const navLinks = [
     id: 4,
     name: 'Contact',
     href: '#contact',
-  },
-  {
-    id: 5,
-    name: "Download Resume",
-    href: '#contact',
   }
 ];
 
