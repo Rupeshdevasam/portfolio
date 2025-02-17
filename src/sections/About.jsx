@@ -2,7 +2,7 @@ import { Suspense, useEffect, useRef, useState } from 'react';
 import Globe from 'react-globe.gl';
 
 import Button from '../components/Button.jsx';
-import { Canvas, useFrame } from '@react-three/fiber';
+import { Canvas } from '@react-three/fiber';
 import Hammer from '../components/Hammer.jsx';
 import CanvasLoader from '../components/Loading.jsx';
 import { PerspectiveCamera } from '@react-three/drei';
