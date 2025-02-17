@@ -15,10 +15,9 @@ export default function Hammer(props) {
   const hammerEl = useRef();
 
   useFrame((state, delta) => {
-    // if(hammerEl.current)
+    if(hammerEl.current)
       hammerEl.current.rotation.y += 0.01;
-    hammerEl.current.rotation.x += 0.01;
-    // hammerEl.current.rotation.z += 0.01;// Rotate around the Y axis
+      hammerEl.current.rotation.x += 0.01;
   });
   return (
     <group {...props} ref={hammerEl} dispose={null}>
