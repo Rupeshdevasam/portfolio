@@ -2,7 +2,7 @@ import { Suspense, useEffect, useRef, useState } from 'react';
 import Globe from 'react-globe.gl';
 
 import Button from '../components/Button.jsx';
-import { Canvas, useFrame } from '@react-three/fiber';
+import { Canvas } from '@react-three/fiber';
 import Hammer from '../components/Hammer.jsx';
 import CanvasLoader from '../components/Loading.jsx';
 import { PerspectiveCamera } from '@react-three/drei';
@@ -72,11 +72,11 @@ const About = () => {
               <Suspense fallback={<CanvasLoader />}>
                 <PerspectiveCamera makeDefault position={[0, 3, 20]} />
 
-                <Hammer position={[2, 3, 0]} scale={18} rotation={[0.1, -Math.PI, 0]} />
+                <Hammer position={[0, 3, 0]} scale={19} rotation={[0.1, 0, 0]} />
                 <ambientLight intensity={12} />
                 <directionalLight position={[10, 100, 10]} intensity={0.5} />
                 {/*<ambientLight />*/}
-                <spotLight intensity={0.3} position={[5, 10, 50]} />
+                <spotLight intensity={100} position={[2,10, 10]} />
               </Suspense>
             </Canvas>
 
