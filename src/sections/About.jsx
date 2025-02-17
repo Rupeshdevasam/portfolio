@@ -72,11 +72,11 @@ const About = () => {
               <Suspense fallback={<CanvasLoader />}>
                 <PerspectiveCamera makeDefault position={[0, 3, 20]} />
 
-                <Hammer position={[2, 3, 0]} scale={18} rotation={[0.1, -Math.PI, 0]} />
+                <Hammer position={[0, 3, 0]} scale={19} rotation={[0.1, 0, 0]} />
                 <ambientLight intensity={12} />
                 <directionalLight position={[10, 100, 10]} intensity={0.5} />
                 {/*<ambientLight />*/}
-                <spotLight intensity={0.3} position={[5, 10, 50]} />
+                <spotLight intensity={100} position={[2,10, 10]} />
               </Suspense>
             </Canvas>
 
