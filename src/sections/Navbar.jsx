@@ -12,7 +12,7 @@ const NavItems = ({ onClick = () => {} }) => (
       </li>
     ))}
     <li className="nav-li">
-      <a href={"docs/Rupesh_Devasam_Resume.pdf"} target={"_blank"} className="nav-li_a" onClick={onClick}>
+      <a href={"docs/RupeshDevasam_SDE.pdf"} target={"_blank"} className="nav-li_a" onClick={onClick}>
         Download Resume
       </a>
     </li>
