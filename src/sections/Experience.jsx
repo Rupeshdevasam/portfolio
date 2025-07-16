@@ -38,8 +38,12 @@ const WorkExperience = () => {
                   onPointerOut={() => setAnimationName('idle')}
                   className="work-content_container group">
                   <div className="flex flex-col h-full justify-start items-center py-2">
-                    <div className="work-content_logo flex justify-center items-center">
-                      <img className={`${item.id === 4 ? 'w-3/5 h-3/5' : 'w-4/5 h-4/5 '}`} src={item.icon} alt="" />
+                    <div className={`work-content_logo flex justify-center items-center`}>
+                      <img
+                        className={`${item.id === 4 ? 'w-3/5 h-3/5' : 'w-4/5 h-4/5 '} ${item.customClass}`} 
+                        src={item.icon}
+                        alt=""
+                      />
                     </div>
 
                     <div className="work-content_bar" />
@@ -53,7 +57,7 @@ const WorkExperience = () => {
 
                     <p className="text-sm mb-5">
                       {item.pos} -- <span>{item.duration}</span>
-                      <p className={"text-sm text-neutral-500"}>{item.technologies?.join(" | ")}</p>
+                      <p className={'text-sm text-neutral-500'}>{item.technologies?.join(' | ')}</p>
                     </p>
                     <p className="group-hover:text-white transition-all ease-in-out duration-500">{item.title}</p>
                   </div>
