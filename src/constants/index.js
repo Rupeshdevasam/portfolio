@@ -18,7 +18,7 @@ export const navLinks = [
     id: 4,
     name: 'Contact',
     href: '#contact',
-  }
+  },
 ];
 
 export const clientReviews = [
@@ -259,6 +259,18 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
 
 export const workExperiences = [
   {
+    id: 0,
+    name: 'Centennial Technologies',
+    pos: 'SDE Intern',
+    duration: 'Mar 2024 - Jun 2024',
+    title:
+      'At Centennial Technologies, I worked as an SDE Intern, building full-stack features from scratch for CHAAP, an FDA regulatory support application. My work involved developing scalable UI components with React (TypeScript), designing efficient backend APIs using Python Flask, and integrating Azure AI models to automate compliance workflows, all while ensuring smooth end-to-end system integration.',
+    icon: '/assets/centennial-tech.png',
+    animation: 'victory',
+    technologies: ['React (TypeScript)', 'Flask', 'Python', 'Azure AI', 'Azure Web Apps', 'Tailwind CSS', 'Cosmos DB'],
+    customClass: 'bg-white rounded-2xl p-2 w-full h-full',
+  },
+  {
     id: 1,
     name: 'Survey Monkey',
     pos: 'SOFTWARE ENGINEER II',
@@ -300,7 +312,7 @@ export const workExperiences = [
       'I interned at Tata Consultancy Services (TCS), where I contributed to client demo projects and led a team of interns, gaining hands-on experience in software development using technologies like Flask, JavaScript, and MongoDB.',
     icon: '/assets/tcs.png',
     animation: 'salute',
-    technologies: ['Flask', 'HTML', 'CSS' ,'Javascript', 'C', 'Mongodb'],
+    technologies: ['Flask', 'HTML', 'CSS', 'Javascript', 'C', 'Mongodb'],
   },
 ];
 
@@ -322,5 +334,5 @@ export const socialMedia = [
     name: 'Instagram',
     src: '/assets/instagram.svg',
     href: 'https://www.instagram.com/rupeshdevasam/',
-  }
-]
+  },
+];
