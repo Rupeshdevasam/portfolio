@@ -262,7 +262,7 @@ export const workExperiences = [
     id: 0,
     name: 'Centennial Technologies',
     pos: 'SDE Intern',
-    duration: 'Mar 2024 - Jun 2024',
+    duration: 'Jun 2025 - July 2025',
     title:
       'At Centennial Technologies, I worked as an SDE Intern, building full-stack features from scratch for CHAAP, an FDA regulatory support application. My work involved developing scalable UI components with React (TypeScript), designing efficient backend APIs using Python Flask, and integrating Azure AI models to automate compliance workflows, all while ensuring smooth end-to-end system integration.',
     icon: '/assets/centennial-tech.png',
