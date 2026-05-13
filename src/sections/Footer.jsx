@@ -5,11 +5,17 @@ const Footer = () => {
       <p className="text-white-500">&copy; 2026 Rupesh Devasam. All rights reserved.</p>
       <div className="flex gap-3 items-center">
 
-        {socialMedia.map(({ src, title, id, href }) => {
+        {socialMedia.map(({ src, name, id, href }) => {
           return (
-            <a href={href} key={id} target={"_blank"} className="flex justify-center items-center">
+            <a
+              href={href}
+              key={id}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={name}
+              className="flex justify-center items-center">
               <div className="social-icon">
-                <img src={src} alt={title} className="w-1/2 h-1/2" />
+                <img src={src} alt={name} className="w-1/2 h-1/2" />
               </div>
             </a>
           );
