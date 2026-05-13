@@ -6,6 +6,7 @@ import { Canvas } from '@react-three/fiber';
 import Hammer from '../components/Hammer.jsx';
 import CanvasLoader from '../components/Loading.jsx';
 import { PerspectiveCamera } from '@react-three/drei';
+import { education } from '../constants/index.js';
 
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
@@ -38,7 +39,7 @@ const About = () => {
   }, []);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(' rupeshdevasam@gmail.com');
+    navigator.clipboard.writeText('rupeshdevasam@gmail.com');
     setHasCopied(true);
 
     setTimeout(() => {
@@ -56,10 +57,11 @@ const About = () => {
             <div>
               <p className="grid-headtext">Hi, I’m Rupesh Devasam</p>
               <p className="grid-subtext">
-                A full-stack software developer with over four years of experience, currently pursuing my MS in Computer
-                Science at UMBC. I have worked at SurveyMonkey, ValueLabs, and VisnetAI, building scalable web
-                applications using React, Vue, FastAPI, and Node.js. Passionate about system design, machine learning,
-                and automation, I’m currently seeking a Summer 2025 Software Engineering Internship
+                AI Full-Stack Engineer (M.S. Computer Science, UMBC, May 2026) with 5+ years building production GenAI
+                and full-stack systems for enterprise and Fortune 500 clients. Currently shipping FDA regulatory
+                automation (CHAAP) and budget intelligence (BIS) at Centennial Technologies on Azure AI Agents, Prompt
+                Flow, RAG, FastAPI, and React / Next.js. Strong in Python, TypeScript, distributed REST APIs, and
+                cloud-native architecture on Azure and AWS.
               </p>
             </div>
           </div>
@@ -83,8 +85,8 @@ const About = () => {
             <div>
               <p className="grid-headtext">Tech Stack</p>
               <p className="grid-subtext">
-                I specialize in a variety of languages, frameworks, and tools that allow me to build robust and scalable
-                applications
+                Python, TypeScript, FastAPI, React, Next.js, and Azure AI Agents day to day. Full breakdown in the
+                Skills section below.
               </p>
             </div>
           </div>
@@ -131,13 +133,18 @@ const About = () => {
             <img src="assets/grid3.png" alt="grid-3" className="w-full sm:h-[266px] h-fit object-contain" />
 
             <div>
-              <p className="grid-headtext">My Passion for Coding</p>
-              <p className="grid-subtext">
-                I love building products that make a real impact—whether it’s crafting smooth user experiences or
-                optimizing backend performance. Coding, for me, is more than just writing lines of code; it’s about
-                solving problems, creating something meaningful, and constantly learning new ways to make technology
-                work better.
-              </p>
+              <p className="grid-headtext">Education</p>
+              <ul className="mt-3 space-y-3">
+                {education.map((item) => (
+                  <li key={item.id} className="grid-subtext">
+                    <p className="text-white font-medium">{item.degree}</p>
+                    <p>
+                      {item.school}, {item.location}
+                    </p>
+                    <p className="text-white-500 text-sm">{item.duration}</p>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>

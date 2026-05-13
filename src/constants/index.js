@@ -11,58 +11,38 @@ export const navLinks = [
   },
   {
     id: 3,
+    name: 'Skills',
+    href: '#skills',
+  },
+  {
+    id: 4,
     name: 'Work',
     href: '#work',
   },
   {
-    id: 4,
+    id: 5,
+    name: 'Projects',
+    href: '#projects',
+  },
+  {
+    id: 6,
     name: 'Contact',
     href: '#contact',
   },
 ];
 
-export const clientReviews = [
-  {
-    id: 1,
-    name: 'Emily Johnson',
-    position: 'Marketing Director at GreenLeaf',
-    img: 'assets/review1.png',
-    review:
-      'Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.',
-  },
-  {
-    id: 2,
-    name: 'Mark Rogers',
-    position: 'Founder of TechGear Shop',
-    img: 'assets/review2.png',
-    review:
-      'Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional! Fantastic work.',
-  },
-  {
-    id: 3,
-    name: 'John Dohsas',
-    position: 'Project Manager at UrbanTech ',
-    img: 'assets/review3.png',
-    review:
-      'I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.',
-  },
-  {
-    id: 4,
-    name: 'Ether Smith',
-    position: 'CEO of BrightStar Enterprises',
-    img: 'assets/review4.png',
-    review:
-      'Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend backend dev are top-notch.',
-  },
-];
+export const clientReviews = [];
 
+// Project visual placeholders (logo / spotlight / texture) reuse the existing
+// template assets so the 3D demo screen, glow, and logo card still render.
+// Swap these per-project once real screenshots/recordings are available.
 export const myProjects = [
   {
-    title: 'Podcastr - AI Podcast Platform',
-    desc: 'Podcastr is a revolutionary Software-as-a-Service platform that transforms the way podcasts are created. With advanced AI-powered features like text-to-multiple-voices functionality, it allows creators to generate diverse voiceovers from a single text input.',
+    title: 'Federated Learning with CNN, Mobile Health Dataset',
+    desc: 'Privacy-preserving federated learning framework that trains a CNN across virtual clients without centralizing raw patient data. Built end-to-end with preprocessing, evaluation, and Federated Averaging-based global aggregation.',
     subdesc:
-      'Built as a unique Software-as-a-Service app with Next.js 14, Tailwind CSS, TypeScript, Framer Motion and Convex, Podcastr is designed for optimal performance and scalability.',
-    href: 'https://www.youtube.com/watch?v=zfAb95tJvZQ',
+      'Implemented in Python with PyTorch and PySyft. Each client trains locally on a partition of the Mobile Health dataset, and only model updates are shared with the aggregator.',
+    href: 'https://github.com/Rupeshdevasam',
     texture: '/textures/project/project1.mp4',
     logo: '/assets/project-logo1.png',
     logoStyle: {
@@ -72,34 +52,18 @@ export const myProjects = [
     },
     spotlight: '/assets/spotlight1.png',
     tags: [
-      {
-        id: 1,
-        name: 'React.js',
-        path: '/assets/react.svg',
-      },
-      {
-        id: 2,
-        name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
-      },
-      {
-        id: 3,
-        name: 'TypeScript',
-        path: '/assets/typescript.png',
-      },
-      {
-        id: 4,
-        name: 'Framer Motion',
-        path: '/assets/framer.png',
-      },
+      { id: 1, name: 'Python', path: '/assets/react.svg' },
+      { id: 2, name: 'PyTorch', path: 'assets/tailwindcss.png' },
+      { id: 3, name: 'PySyft', path: '/assets/typescript.png' },
+      { id: 4, name: 'CNN', path: '/assets/framer.png' },
     ],
   },
   {
-    title: 'LiveDoc - Real-Time Google Docs Clone',
-    desc: 'LiveDoc is a powerful collaborative app that elevates the capabilities of real-time document editing. As an enhanced version of Google Docs, It supports millions of collaborators simultaneously, ensuring that every change is captured instantly and accurately.',
+    title: 'Twitter Real-Time Tweet Streamer',
+    desc: 'Real-time tweet streaming app built on the MERN stack with WebSockets. Captures live tweets by keyword or hashtag through the Twitter API v2 and pushes them to an interactive React dashboard at sub-second latency.',
     subdesc:
-      'With LiveDoc, users can experience the future of collaboration, where multiple contributors work together in real time without any lag, by using Next.js and Liveblocks newest features.',
-    href: 'https://www.youtube.com/watch?v=y5vE8y_f_OM',
+      'Node and Express handle the streaming connection and fan-out, while MongoDB stores recent tweets for replay. The React client subscribes over WebSockets and renders an updating feed.',
+    href: 'https://github.com/Rupeshdevasam/twitter-realtime-tweet-streamer',
     texture: '/textures/project/project2.mp4',
     logo: '/assets/project-logo2.png',
     logoStyle: {
@@ -109,34 +73,18 @@ export const myProjects = [
     },
     spotlight: '/assets/spotlight2.png',
     tags: [
-      {
-        id: 1,
-        name: 'React.js',
-        path: '/assets/react.svg',
-      },
-      {
-        id: 2,
-        name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
-      },
-      {
-        id: 3,
-        name: 'TypeScript',
-        path: '/assets/typescript.png',
-      },
-      {
-        id: 4,
-        name: 'Framer Motion',
-        path: '/assets/framer.png',
-      },
+      { id: 1, name: 'React.js', path: '/assets/react.svg' },
+      { id: 2, name: 'Node.js', path: 'assets/tailwindcss.png' },
+      { id: 3, name: 'MongoDB', path: '/assets/typescript.png' },
+      { id: 4, name: 'WebSockets', path: '/assets/framer.png' },
     ],
   },
   {
-    title: 'CarePulse - Health Management System',
-    desc: 'An innovative healthcare platform designed to streamline essential medical processes. It simplifies patient registration, appointment scheduling, and medical record management, providing a seamless experience for both healthcare providers and patients.',
+    title: 'RegenEx, Full-Stack Web Application',
+    desc: 'Full-stack web application with a React frontend and a Node.js backend, deployed end-to-end on Vercel. Built and shipped as two coordinated services that share a common API contract.',
     subdesc:
-      'With a focus on efficiency, CarePulse integrantes complex forms and SMS notifications, by using Next.js, Appwrite, Twillio and Sentry that enhance operational workflows.',
-    href: 'https://www.youtube.com/watch?v=lEflo_sc82g',
+      'Frontend is a React single-page app; the backend exposes a REST API in Node.js / Express. Both repositories are public on GitHub and run live on Vercel.',
+    href: 'https://regen-ex.vercel.app',
     texture: '/textures/project/project3.mp4',
     logo: '/assets/project-logo3.png',
     logoStyle: {
@@ -148,34 +96,18 @@ export const myProjects = [
     },
     spotlight: '/assets/spotlight3.png',
     tags: [
-      {
-        id: 1,
-        name: 'React.js',
-        path: '/assets/react.svg',
-      },
-      {
-        id: 2,
-        name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
-      },
-      {
-        id: 3,
-        name: 'TypeScript',
-        path: '/assets/typescript.png',
-      },
-      {
-        id: 4,
-        name: 'Framer Motion',
-        path: '/assets/framer.png',
-      },
+      { id: 1, name: 'React.js', path: '/assets/react.svg' },
+      { id: 2, name: 'Node.js', path: 'assets/tailwindcss.png' },
+      { id: 3, name: 'Express', path: '/assets/typescript.png' },
+      { id: 4, name: 'Vercel', path: '/assets/framer.png' },
     ],
   },
   {
-    title: 'Horizon - Online Banking Platform',
-    desc: 'Horizon is a comprehensive online banking platform that offers users a centralized finance management dashboard. It allows users to connect multiple bank accounts, monitor real-time transactions, and seamlessly transfer money to other users.',
+    title: 'JSON Formatter',
+    desc: 'Browser-based tool that auto-formats and minifies JSON as you type. Built as a zero-dependency client-side utility, deployed on Vercel.',
     subdesc:
-      'Built with Next.js 14 Appwrite, Dwolla and Plaid, Horizon ensures a smooth and secure banking experience, tailored to meet the needs of modern consumers.',
-    href: 'https://www.youtube.com/watch?v=PuOVqP_cjkE',
+      'Single-page React app. Parses input on every keystroke, pretty-prints with configurable indentation, and supports one-click minify and copy. No data leaves the browser.',
+    href: 'https://json-formatter-kappa.vercel.app',
     texture: '/textures/project/project4.mp4',
     logo: '/assets/project-logo4.png',
     logoStyle: {
@@ -185,63 +117,10 @@ export const myProjects = [
     },
     spotlight: '/assets/spotlight4.png',
     tags: [
-      {
-        id: 1,
-        name: 'React.js',
-        path: '/assets/react.svg',
-      },
-      {
-        id: 2,
-        name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
-      },
-      {
-        id: 3,
-        name: 'TypeScript',
-        path: '/assets/typescript.png',
-      },
-      {
-        id: 4,
-        name: 'Framer Motion',
-        path: '/assets/framer.png',
-      },
-    ],
-  },
-  {
-    title: 'Imaginify - AI Photo Manipulation App',
-    desc: 'Imaginify is a groundbreaking Software-as-a-Service application that empowers users to create stunning photo manipulations using AI technology. With features like AI-driven image editing, a payments system, and a credits-based model.',
-    subdesc:
-      'Built with Next.js 14, Cloudinary AI, Clerk, and Stripe, Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.',
-    href: 'https://www.youtube.com/watch?v=Ahwoks_dawU',
-    texture: '/textures/project/project5.mp4',
-    logo: '/assets/project-logo5.png',
-    logoStyle: {
-      backgroundColor: '#1C1A43',
-      border: '0.2px solid #252262',
-      boxShadow: '0px 0px 60px 0px #635BFF4D',
-    },
-    spotlight: '/assets/spotlight5.png',
-    tags: [
-      {
-        id: 1,
-        name: 'React.js',
-        path: '/assets/react.svg',
-      },
-      {
-        id: 2,
-        name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
-      },
-      {
-        id: 3,
-        name: 'TypeScript',
-        path: '/assets/typescript.png',
-      },
-      {
-        id: 4,
-        name: 'Framer Motion',
-        path: '/assets/framer.png',
-      },
+      { id: 1, name: 'React.js', path: '/assets/react.svg' },
+      { id: 2, name: 'JavaScript', path: 'assets/tailwindcss.png' },
+      { id: 3, name: 'Vite', path: '/assets/typescript.png' },
+      { id: 4, name: 'Vercel', path: '/assets/framer.png' },
     ],
   },
 ];
@@ -261,58 +140,160 @@ export const workExperiences = [
   {
     id: 0,
     name: 'Centennial Technologies',
-    pos: 'SDE Intern',
-    duration: 'Mar 2024 - Jun 2024',
+    pos: 'AI Full-Stack Engineer',
+    duration: 'Feb 2026 – Present',
     title:
-      'At Centennial Technologies, I worked as an SDE Intern, building full-stack features from scratch for CHAAP, an FDA regulatory support application. My work involved developing scalable UI components with React (TypeScript), designing efficient backend APIs using Python Flask, and integrating Azure AI models to automate compliance workflows, all while ensuring smooth end-to-end system integration.',
+      'Architected an enterprise GenAI platform powering CHAAP (FDA regulatory automation) and BIS (Budget Intelligence Suite) on Azure AI Agents, Prompt Flow, and Azure OpenAI, processing 15,000+ documents per month with a 72% reduction in manual review time and sub-3s analysis latency. Built FastAPI and Flask services with async processing, Redis caching, and multi-tenant isolation across PostgreSQL, CosmosDB, and Redis, hitting 180ms p95 API latency for 2,500+ concurrent users. Orchestrated 120+ n8n automation workflows across upstream data sources, AI services, and downstream business systems, cutting manual ops by 65% and saving 40+ engineering hours per week. Led frontend modernization with React, Next.js, and TypeScript on Azure Web Apps via CI/CD, dropping page load times by 38% and deploys from 45 minutes to 8 with zero-downtime releases.',
     icon: '/assets/centennial-tech.png',
     animation: 'victory',
-    technologies: ['React (TypeScript)', 'Flask', 'Python', 'Azure AI', 'Azure Web Apps', 'Tailwind CSS', 'Cosmos DB'],
+    technologies: [
+      'Azure AI Agents',
+      'Azure Prompt Flow',
+      'Azure OpenAI',
+      'FastAPI',
+      'Flask',
+      'React',
+      'Next.js',
+      'TypeScript',
+      'PostgreSQL',
+      'CosmosDB',
+      'Redis',
+      'n8n',
+    ],
     customClass: 'bg-white rounded-2xl p-2 w-full h-full',
   },
   {
     id: 1,
-    name: 'Survey Monkey',
-    pos: 'SOFTWARE ENGINEER II',
-    duration: 'Mar 2024 - Jun 2024',
+    name: 'CloudLeap Technologies',
+    pos: 'Full-Stack Developer Intern',
+    duration: 'Sep 2025 – Dec 2025',
     title:
-      'At SurveyMonkey, I worked as a Software Engineer II, developing full-stack features with a focus on performance, scalability, and user experience using React, and Python.',
-    icon: '/assets/SurveyMonkey.svg',
-    animation: 'victory',
-    technologies: ['React', 'FastAPI', 'Javascript', 'Figma', 'Python'],
+      'Built immersive 3D web applications with React and Three.js, delivering browser-native interactive visualizations and gamified experiences that supported 8,000+ active users at 60 FPS on standard hardware. Developed Flask REST APIs and drove frontend performance work via lazy loading, memoization, and code splitting, reducing time-to-interactive by 42% and bundle size by 35%. Contributed to sprint planning, code reviews, and full-stack integration.',
+    icon: '/assets/cloudleap.png',
+    animation: 'clapping',
+    technologies: ['React', 'Three.js', 'Flask', 'Python', 'REST APIs', 'JavaScript'],
   },
   {
     id: 2,
-    name: 'Visnet AI',
-    pos: 'Web Developer',
-    duration: 'Apr 2023 - Feb 2024',
+    name: 'Centennial Technologies',
+    pos: 'Software Development Engineer Intern',
+    duration: 'Jun 2025 – Aug 2025',
     title:
-      'At VisnetAI, I led a team of developers to build and optimize web applications, making sure they were fast, scalable, and user-friendly. Working across Vue, FastAPI, and MongoDB, I collaborated with designers and engineers to create seamless digital experiences.',
-    icon: '/assets/visnetai.png',
-    animation: 'clapping',
-    technologies: ['Vue', 'FastAPI', 'Python', 'MongoDB', 'Javascript', 'Figma', 'Leadership'],
+      'Spearheaded development of CHAAP, an FDA regulatory support application, from the ground up using React with TypeScript, Python Flask, and Azure AI Services. Partnered with PMs on system architecture and CI/CD, cutting release cycle time by 30%. Awarded "Sprint Champion" for consistently delivering high-impact features and driving smooth full-stack integration under tight deadlines.',
+    icon: '/assets/centennial-tech.png',
+    animation: 'victory',
+    technologies: ['React (TypeScript)', 'Flask', 'Python', 'Azure AI', 'Azure Web Apps', 'Tailwind CSS', 'CosmosDB'],
+    customClass: 'bg-white rounded-2xl p-2 w-full h-full',
   },
   {
     id: 3,
-    name: 'Valuelabs',
-    pos: 'Full Stack Developer',
-    duration: 'Aug 2019 - Mar 2023',
+    name: 'SurveyMonkey',
+    pos: 'Software Engineer II',
+    duration: 'Mar 2024 – Jun 2024',
     title:
-      'At ValueLabs, started as an intern, where I developed full-stack proof-of-concept applications, and later progressed to a Software Engineer and Senior Software Engineer, focusing on building user-facing features, efficient APIs, and automation scripts using technologies like React, Vue, Node, and MongoDB.',
-    icon: '/assets/valuelabs.png',
-    animation: 'salute',
-    technologies: ['React', 'Vue', 'Node', 'Express', 'SQL', ' MongoDB', 'Javascript', 'Figma'],
+      'Developed full-stack features for high-traffic survey applications using React, FastAPI, and Python, supporting 100K+ monthly active users with improved performance and scalability. Built reusable React component libraries integrated with FastAPI backends, cutting development time by 30%. Optimized REST APIs through query optimization and caching, reducing response times by 25%.',
+    icon: '/assets/SurveyMonkey.svg',
+    animation: 'victory',
+    technologies: ['React', 'FastAPI', 'Python', 'JavaScript', 'REST APIs', 'Figma'],
   },
   {
     id: 4,
-    name: 'Tata Consultancy Services',
-    pos: 'SDE Intern',
-    duration: 'May 2019 - July 2019',
+    name: 'ValueLabs',
+    pos: 'Full-Stack Developer',
+    duration: 'Aug 2019 – Feb 2024',
     title:
-      'I interned at Tata Consultancy Services (TCS), where I contributed to client demo projects and led a team of interns, gaining hands-on experience in software development using technologies like Flask, JavaScript, and MongoDB.',
-    icon: '/assets/tcs.png',
+      'Developed and maintained scalable enterprise web applications for Fortune 500 clients using React, Vue.js, Node.js, and Express. Integrated SQL and MongoDB with indexing and connection pooling, improving data processing speed by 25%. Designed and improved RESTful APIs in Node and Express, reducing response times by 30% through query optimization. Recognized with the Star Award for technical contributions and mentoring junior developers.',
+    icon: '/assets/valuelabs.png',
     animation: 'salute',
-    technologies: ['Flask', 'HTML', 'CSS', 'Javascript', 'C', 'Mongodb'],
+    technologies: ['React', 'Vue.js', 'Node.js', 'Express', 'SQL', 'MongoDB', 'JavaScript', 'REST APIs'],
+  },
+];
+
+export const skillGroups = [
+  {
+    id: 1,
+    title: 'Languages',
+    items: ['Python', 'JavaScript (ES6+)', 'TypeScript', 'Java', 'C++', 'C', 'SQL', 'Shell Scripting'],
+  },
+  {
+    id: 2,
+    title: 'Cloud',
+    items: [
+      'Azure (AI Agents, Prompt Flow, OpenAI, Web Apps, CosmosDB)',
+      'AWS (Lambda, S3, EC2, RDS, DynamoDB)',
+    ],
+  },
+  {
+    id: 3,
+    title: 'Frameworks & Libraries',
+    items: [
+      'FastAPI',
+      'Flask',
+      'Node.js',
+      'Express.js',
+      'React.js',
+      'Next.js',
+      'Vue.js',
+      'Three.js',
+      'Tailwind CSS',
+      'GraphQL',
+      'WebSockets',
+    ],
+  },
+  {
+    id: 4,
+    title: 'Databases',
+    items: ['PostgreSQL', 'CosmosDB', 'MongoDB', 'MySQL', 'Redis', 'DynamoDB'],
+  },
+  {
+    id: 5,
+    title: 'DevOps',
+    items: ['Docker', 'CI/CD', 'Git', 'GitHub Actions', 'Azure DevOps', 'RESTful API design', 'Microservices'],
+  },
+  {
+    id: 6,
+    title: 'AI / ML',
+    items: [
+      'Azure AI Agents',
+      'Azure Prompt Flow',
+      'Azure OpenAI',
+      'Semantic Kernel',
+      'LangChain',
+      'MCP (Model Context Protocol)',
+      'RAG',
+      'Prompt Engineering',
+      'LLM Fine-tuning',
+      'n8n Workflows',
+      'NLP',
+      'Computer Vision',
+      'PyTorch',
+      'TensorFlow',
+      'PySyft',
+      'Federated Learning',
+      'CNNs',
+    ],
+  },
+  {
+    id: 7,
+    title: 'Tools',
+    items: ['Postman', 'Figma', 'Jira', 'Confluence', 'Agile / Scrum', 'TDD', 'Code Reviews', 'System Design'],
+  },
+];
+
+export const education = [
+  {
+    id: 1,
+    degree: 'M.S. Computer Science',
+    school: 'University of Maryland, Baltimore County (UMBC)',
+    location: 'USA',
+    duration: 'May 2026',
+  },
+  {
+    id: 2,
+    degree: 'B.S. Computer Science',
+    school: 'JNTU Kakinada (AITAM)',
+    location: 'India',
+    duration: 'Sep 2020',
   },
 ];
 

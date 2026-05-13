@@ -40,9 +40,9 @@ const WorkExperience = () => {
                   <div className="flex flex-col h-full justify-start items-center py-2">
                     <div className={`work-content_logo flex justify-center items-center`}>
                       <img
-                        className={`${item.id === 4 ? 'w-3/5 h-3/5' : 'w-4/5 h-4/5 '} ${item.customClass}`} 
+                        className={`w-4/5 h-4/5 ${item.customClass ?? ''}`}
                         src={item.icon}
-                        alt=""
+                        alt={item.name}
                       />
                     </div>
 
