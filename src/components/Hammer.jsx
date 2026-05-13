@@ -58,5 +58,3 @@ export default function Hammer(props) {
     </group>
   )
 }
-
-useGLTF.preload('/models/hammer.glb')

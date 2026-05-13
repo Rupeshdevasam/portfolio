@@ -50,7 +50,7 @@ export const myProjects = [
       border: '0.2px solid #36201D',
       boxShadow: '0px 0px 60px 0px #AA3C304D',
     },
-    spotlight: '/assets/spotlight1.png',
+    spotlight: '/assets/spotlight1.webp',
     tags: [
       { id: 1, name: 'Python', path: '/assets/react.svg' },
       { id: 2, name: 'PyTorch', path: 'assets/tailwindcss.png' },
@@ -71,7 +71,7 @@ export const myProjects = [
       border: '0.2px solid #17293E',
       boxShadow: '0px 0px 60px 0px #2F6DB54D',
     },
-    spotlight: '/assets/spotlight2.png',
+    spotlight: '/assets/spotlight2.webp',
     tags: [
       { id: 1, name: 'React.js', path: '/assets/react.svg' },
       { id: 2, name: 'Node.js', path: 'assets/tailwindcss.png' },
@@ -94,7 +94,7 @@ export const myProjects = [
       border: '0.2px solid rgba(208, 213, 221, 1)',
       boxShadow: '0px 0px 60px 0px rgba(35, 131, 96, 0.3)',
     },
-    spotlight: '/assets/spotlight3.png',
+    spotlight: '/assets/spotlight3.webp',
     tags: [
       { id: 1, name: 'React.js', path: '/assets/react.svg' },
       { id: 2, name: 'Node.js', path: 'assets/tailwindcss.png' },
@@ -115,7 +115,7 @@ export const myProjects = [
       border: '0.2px solid #0E2D58',
       boxShadow: '0px 0px 60px 0px #2F67B64D',
     },
-    spotlight: '/assets/spotlight4.png',
+    spotlight: '/assets/spotlight4.webp',
     tags: [
       { id: 1, name: 'React.js', path: '/assets/react.svg' },
       { id: 2, name: 'JavaScript', path: 'assets/tailwindcss.png' },

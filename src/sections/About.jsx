@@ -5,6 +5,7 @@ import Button from '../components/Button.jsx';
 import { Canvas } from '@react-three/fiber';
 import Hammer from '../components/Hammer.jsx';
 import CanvasLoader from '../components/Loading.jsx';
+import InView from '../components/InView.jsx';
 import { PerspectiveCamera } from '@react-three/drei';
 import { education } from '../constants/index.js';
 
@@ -70,17 +71,19 @@ const About = () => {
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
             {/*<img src="assets/grid2.png" alt="grid-2" className="w-full sm:h-[276px] h-fit object-contain" />*/}
-            <Canvas className={"w-full h-full"}>
-              <Suspense fallback={<CanvasLoader />}>
-                <PerspectiveCamera makeDefault position={[0, 3, 20]} />
+            <InView>
+              <Canvas className={"w-full h-full"}>
+                <Suspense fallback={<CanvasLoader />}>
+                  <PerspectiveCamera makeDefault position={[0, 3, 20]} />
 
-                <Hammer position={[0, 3, 0]} scale={19} rotation={[0.1, 0, 0]} />
-                <ambientLight intensity={12} />
-                <directionalLight position={[10, 100, 10]} intensity={0.5} />
-                {/*<ambientLight />*/}
-                <spotLight intensity={100} position={[2,10, 10]} />
-              </Suspense>
-            </Canvas>
+                  <Hammer position={[0, 3, 0]} scale={19} rotation={[0.1, 0, 0]} />
+                  <ambientLight intensity={12} />
+                  <directionalLight position={[10, 100, 10]} intensity={0.5} />
+                  {/*<ambientLight />*/}
+                  <spotLight intensity={100} position={[2,10, 10]} />
+                </Suspense>
+              </Canvas>
+            </InView>
 
             <div>
               <p className="grid-headtext">Tech Stack</p>
@@ -95,28 +98,30 @@ const About = () => {
         <div className="col-span-1 xl:row-span-4">
           <div className="grid-container">
             <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center">
-              <Globe
-                ref={globeEl}
-                height={326}
-                width={326}
-                autoRotate={true}
-                backgroundColor="rgba(0, 0, 0, 0)"
-                backgroundImageOpacity={0.5}
-                showAtmosphere
-                showGlobe
-                showGraticules
-                globeImageUrl={`//unpkg.com/three-globe/example/img/earth-${isDay ? 'day' : 'night'}.jpg`}
-                bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
-                labelsData={[
-                  { lat: 39.2818355, lng: -76.709509, label: `I'm here`, size: 2, color: 'yellow', altitude: 0.1 },
-                ]}
-                labelLat={(d) => d.lat}
-                labelLng={(d) => d.lng}
-                labelText={(d) => d.label}
-                labelSize={(d) => d.size}
-                labelColor={(d) => d.color}
-                labelAltitude={(d) => d.altitude}
-              />
+              <InView className="w-[326px] h-[326px]">
+                <Globe
+                  ref={globeEl}
+                  height={326}
+                  width={326}
+                  autoRotate={true}
+                  backgroundColor="rgba(0, 0, 0, 0)"
+                  backgroundImageOpacity={0.5}
+                  showAtmosphere
+                  showGlobe
+                  showGraticules
+                  globeImageUrl={`//unpkg.com/three-globe/example/img/earth-${isDay ? 'day' : 'night'}.jpg`}
+                  bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
+                  labelsData={[
+                    { lat: 39.2818355, lng: -76.709509, label: `I'm here`, size: 2, color: 'yellow', altitude: 0.1 },
+                  ]}
+                  labelLat={(d) => d.lat}
+                  labelLng={(d) => d.lng}
+                  labelText={(d) => d.label}
+                  labelSize={(d) => d.size}
+                  labelColor={(d) => d.color}
+                  labelAltitude={(d) => d.altitude}
+                />
+              </InView>
             </div>
             <div>
               <p className="grid-headtext">I’m very flexible with time zone communications & locations</p>
