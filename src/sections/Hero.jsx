@@ -58,7 +58,7 @@ const Hero = () => {
               </HeroCamera>
 
               <group>
-                <Hammer position={sizes.targetPosition} scale={1.5} rotation={[0, Math.PI / 5, 0]} />
+                <Hammer src="/models/hammer-hero.glb" position={sizes.targetPosition} scale={1.5} rotation={[0, Math.PI / 5, 0]} />
                 <ReactLogo position={sizes.reactLogoPosition} />
                 <Rings position={sizes.ringPosition} />
                 <Cube position={sizes.cubePosition} />

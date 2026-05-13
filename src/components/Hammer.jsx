@@ -10,8 +10,8 @@ import { useGLTF } from '@react-three/drei'
 import { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 
-export default function Hammer(props) {
-  const { nodes, materials } = useGLTF('/models/hammer.glb')
+export default function Hammer({ src = '/models/hammer.glb', ...props }) {
+  const { nodes, materials } = useGLTF(src)
   const hammerEl = useRef();
 
   useFrame((state, delta) => {
