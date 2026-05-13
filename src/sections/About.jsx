@@ -1,4 +1,4 @@
-import { Suspense, useEffect, useRef, useState } from 'react';
+import { Suspense, useCallback, useEffect, useState } from 'react';
 import Globe from 'react-globe.gl';
 
 import Button from '../components/Button.jsx';
@@ -12,8 +12,6 @@ import { education } from '../constants/index.js';
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
   const [isDay, setIsDay] = useState(false);
-  const globeEl = useRef();
-
 
   function isDaytime() {
     const now = new Date();
@@ -30,13 +28,19 @@ const About = () => {
     if (isDaytime()) {
       setIsDay(true);
     }
-    if (globeEl.current) {
-      globeEl.current.pointOfView({
-        lat: 39.2818355,
-        lng: -76.709509,
-        altitude: 2,
-      });
-    }
+  }, []);
+
+  // Callback ref so pointOfView fires when the Globe actually mounts (which is
+  // deferred by InView until the section scrolls into view). A regular ref +
+  // useEffect would run before the Globe exists and leave the camera at its
+  // default position over Africa.
+  const handleGlobeRef = useCallback((node) => {
+    if (!node) return;
+    node.pointOfView({
+      lat: 39.2818355,
+      lng: -76.709509,
+      altitude: 2,
+    });
   }, []);
 
   const handleCopy = () => {
@@ -100,7 +104,7 @@ const About = () => {
             <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center">
               <InView className="w-[326px] h-[326px]">
                 <Globe
-                  ref={globeEl}
+                  ref={handleGlobeRef}
                   height={326}
                   width={326}
                   autoRotate={true}
