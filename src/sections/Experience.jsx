@@ -5,6 +5,7 @@ import { OrbitControls } from '@react-three/drei';
 import Developer from '../components/Developer.jsx';
 import CanvasLoader from '../components/Loading.jsx';
 import InView from '../components/InView.jsx';
+import Skeleton from '../components/Skeleton.jsx';
 import { workExperiences } from '../constants/index.js';
 
 const WorkExperience = () => {
@@ -17,7 +18,7 @@ const WorkExperience = () => {
 
         <div className="work-container">
           <div className="work-canvas">
-            <InView>
+            <InView fallback={<Skeleton className="w-full h-full" rounded="rounded-lg" />}>
               <Canvas>
                 <ambientLight intensity={7} />
                 <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />

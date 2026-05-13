@@ -8,6 +8,7 @@ import { myProjects } from '../constants/index.js';
 import CanvasLoader from '../components/Loading.jsx';
 import DemoComputer from '../components/DemoComputer.jsx';
 import InView from '../components/InView.jsx';
+import Skeleton from '../components/Skeleton.jsx';
 
 const projectCount = myProjects.length;
 
@@ -73,7 +74,7 @@ const Projects = () => {
         </div>
 
         <div className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full">
-          <InView>
+          <InView fallback={<Skeleton className="w-full h-full" rounded="rounded-lg" />}>
             <Canvas>
               <ambientLight intensity={Math.PI} />
               <directionalLight position={[10, 10, 5]} />

@@ -13,6 +13,38 @@ body {
   font-family: 'General Sans', sans-serif;
 }
 
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton-shimmer {
+  background-color: #15151a;
+  background-image: linear-gradient(110deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 70%);
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.6s ease-in-out infinite;
+  will-change: background-position;
+}
+
+.canvas-loader {
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
+  border: 3px solid rgba(255, 255, 255, 0.15);
+  border-top-color: #afb0b6;
+  animation: canvas-spinner 0.9s linear infinite;
+}
+
+@keyframes canvas-spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @layer utilities {
   .c-space {
     @apply sm:px-10 px-5;

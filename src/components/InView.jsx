@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-const InView = ({ rootMargin = '200px', children, className = 'w-full h-full' }) => {
+const InView = ({ rootMargin = '200px', children, className = 'w-full h-full', fallback = null }) => {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
 
@@ -21,7 +21,7 @@ const InView = ({ rootMargin = '200px', children, className = 'w-full h-full' })
 
   return (
     <div ref={ref} className={className}>
-      {visible ? children : null}
+      {visible ? children : fallback}
     </div>
   );
 };

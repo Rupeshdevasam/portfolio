@@ -6,6 +6,7 @@ import { Canvas } from '@react-three/fiber';
 import Hammer from '../components/Hammer.jsx';
 import CanvasLoader from '../components/Loading.jsx';
 import InView from '../components/InView.jsx';
+import Skeleton from '../components/Skeleton.jsx';
 import { PerspectiveCamera } from '@react-three/drei';
 import { education } from '../constants/index.js';
 
@@ -75,7 +76,7 @@ const About = () => {
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
             {/*<img src="assets/grid2.png" alt="grid-2" className="w-full sm:h-[276px] h-fit object-contain" />*/}
-            <InView>
+            <InView fallback={<Skeleton className="w-full h-full min-h-[276px]" rounded="rounded-2xl" />}>
               <Canvas className={"w-full h-full"}>
                 <Suspense fallback={<CanvasLoader />}>
                   <PerspectiveCamera makeDefault position={[0, 3, 20]} />
@@ -102,7 +103,9 @@ const About = () => {
         <div className="col-span-1 xl:row-span-4">
           <div className="grid-container">
             <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center">
-              <InView className="w-[326px] h-[326px]">
+              <InView
+                className="w-[326px] h-[326px]"
+                fallback={<Skeleton className="w-[326px] h-[326px]" rounded="rounded-full" />}>
                 <Globe
                   ref={handleGlobeRef}
                   height={326}
